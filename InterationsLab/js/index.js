@@ -110,31 +110,94 @@ console.log(customEvery(everyArray,everyCallback));
 
 //slice
 
-const sliceArray=[1,13,43,54,76];
-console.log(sliceArray);
+//const sliceArray=[1,13,43,54,76];
+//console.log(sliceArray);
 
-function customSlice(numberOfElement,array){
-    let slicedArray=[]
-    let sliceIndex=0;
+//function customSlice(numberOfElement,array){
+//    let slicedArray=[]
+//    let sliceIndex=0;
     
     
-    if (numberOfElement<=array.length) {
-        array[numberOfElement-1]=array[numberOfElement]
+//    if (numberOfElement<=array.length) {
+ //       array[numberOfElement-1]=array[numberOfElement]
         
-        for ( index = numberOfElement; index < array.length-1; index++) {
-            array[index]=array[index+1]
-            slicedArray[sliceIndex]=array[index-numberOfElement]
+ //       for ( index = numberOfElement; index < array.length-1; index++) {
+ //           array[index]=array[index+1]
+ //           slicedArray[sliceIndex]=array[index-numberOfElement]
 
             
         
             
             
-        }
-        return slicedArray;
+  //      }
+//        return slicedArray;
 
-}}
+//}}
 
-console.log(customSlice(2,sliceArray));
+//console.log(customSlice(2,sliceArray));
+
+
+//indexOf
+
+const indexOfArray=[12,23,56,78]
+console.log(indexOfArray);
+
+
+
+
+
+function customIndexOf(element,array){
+
+  for (let index = 0; index < array.length; index++) {
+    if (array[index]==element) {
+      return index;
+      
+    }
+    
+    
+    
+  }
+  return -1;
+
+
+}
+
+console.log(customIndexOf(78,indexOfArray)); 
+
+
+
+//find
+
+const findArray=[10,11,90,101,69];
+console.log(findArray);
+
+
+function findCallback(element) {
+  return element>18;
+}
+ 
+
+
+
+
+function customFind(array,callback){
+  for (let index = 0; index < array.length; index++) {
+    if (callback(array[index])) {
+      return array[index];
+      
+    }
+  
+    
+  }
+  return -1;
+
+}
+
+console.log(customFind(findArray,findCallback));
+
+
+//end
+
 
 
 
